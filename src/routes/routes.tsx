@@ -1,5 +1,5 @@
 import { RouteObject } from 'react-router-dom';
-import PageLoader from '../pages/PageLoader';
+import PageLoader from '../components/PageLoader';
 import React from 'react';
 import LogInGuard from '../authorization/LogInGuard';
 
@@ -16,12 +16,14 @@ const routes: RouteObject[] = [
 			</React.Suspense>
 		),
 		path: '/*', // Root path
+		errorElement: <div>errorElement in PublicModule</div>,
 	},
 	{
 		element: (
-			<React.Suspense fallback={<PageLoader />}>
-				<MainModule />
-			</React.Suspense>
+			// <React.Suspense fallback={<PageLoader />}>
+			// 	<MainModule />
+			// </React.Suspense>
+			<MainModule />
 		),
 		path: 'app/*',
 	},

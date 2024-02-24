@@ -1,0 +1,6 @@
+.navlink {
+	color: white; /* Primary text color when active */
+	background-color: #2586e0;
+	width: 200px;
+	/* Add any other styles you want for the active NavLink */
+}

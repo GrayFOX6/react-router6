@@ -4,8 +4,8 @@ import AuthStore from '../authorization/AuthStore';
 class RootStore {
 	authStore: AuthStore;
 
-	constructor() {
-		this.authStore = new AuthStore();
+	constructor(router: any) {
+		this.authStore = new AuthStore(router);
 	}
 }
 
