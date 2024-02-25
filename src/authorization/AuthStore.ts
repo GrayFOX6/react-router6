@@ -8,7 +8,7 @@ class AuthStore {
 	user: User | null = null;
 
 	get isAuthenticated() {
-		return true; //this.user !== null;
+		return this.user !== null;
 	}
 
 	constructor(router: any) {

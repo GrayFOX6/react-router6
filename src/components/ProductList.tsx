@@ -10,7 +10,7 @@ function ProductList({ products }: ProductListProps) {
 		<div style={{ display: 'flex', flexDirection: 'column' }}>
 			{products.map((product) => {
 				return (
-					<Link key={product.id} to={`/products/${product.id}`}>
+					<Link key={product.id} to={`/app/products/${product.id}`}>
 						{product.name}
 					</Link>
 				);

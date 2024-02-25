@@ -10,20 +10,18 @@ const routes: RouteObject[] = [
 	{
 		element: (
 			<React.Suspense fallback={<PageLoader />}>
-				<LogInGuard>
-					<PublicModule />
-				</LogInGuard>
+				<PublicModule />
 			</React.Suspense>
 		),
 		path: '/*', // Root path
-		errorElement: <div>errorElement in PublicModule</div>,
 	},
 	{
 		element: (
-			// <React.Suspense fallback={<PageLoader />}>
-			// 	<MainModule />
-			// </React.Suspense>
-			<MainModule />
+			<React.Suspense fallback={<PageLoader />}>
+				<LogInGuard>
+					<MainModule />
+				</LogInGuard>
+			</React.Suspense>
 		),
 		path: 'app/*',
 	},

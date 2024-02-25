@@ -14,8 +14,8 @@ export const publicRoutes: RouteObject[] = [
 		path: '/login',
 		element: <Login />,
 	},
-	// {
-	// 	path: '/*',
-	// 	element: <NotFound />,
-	// },
+	{
+		path: '/*',
+		element: <NotFound />,
+	},
 ];
